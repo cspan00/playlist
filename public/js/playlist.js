@@ -16,6 +16,19 @@ $(document).ready(function(){
     };
 
 
+$("#submit_bin").click(function(){
+  console.log($("#output").html() );
+  $.ajax({
+    method:"POST",
+    url:' https://lit-fortress-6467.herokuapp.com/post'
+  }).done(function(){
+    console.log("Data Saved");
+  });
+
+
+});
+
+
 
 $(document).on("click", ".clickable", function(){
         album_id = $(this).attr('id');

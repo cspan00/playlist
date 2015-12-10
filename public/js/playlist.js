@@ -22,14 +22,17 @@ $(document).on("click", ".clickable", function(){
     for(var j=0; j<data['results'].length; j++){
 
       if(data['results'][j]['id'] == album_id){
-        var artist_album = data['results'][j]['artist'] + data['results'][j]['title']
-        $("#output").append(artist_album+'<br>');
+        var artist = data['results'][j]['artist']
+        var album = data['results'][j]['title']
+        $("#output").append(artist+': '+album+'<br>');
 
     }
 }
   });
 
-
+$(document).on("click", "#clear_tracks", function(){
+  $("#output").html(" ");
+});
 
 
 });

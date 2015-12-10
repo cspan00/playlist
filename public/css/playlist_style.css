@@ -37,7 +37,7 @@ p{
   overflow-y: hidden;
   overflow-x: scroll;
 }
-#album_art{
+img:first-of-type{
   margin: 12px;
   width: 100px;
   height: 100px;

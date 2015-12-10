@@ -4,6 +4,7 @@ $(document).ready(function(){
     method: "GET",
     dataType: "json"
   })
+
 api.done(function(data){
   console.log(data)
 
@@ -15,17 +16,10 @@ $(document).ready(function(){
   var image1 = "images/"+ data['results'][i]['cover_art'];
   var image2 = "images/"+ data['results'][j]['cover_art'];
   var image3 = "images/"+ data['results'][k]['cover_art'];
-
-
  $('#album_covers').append('<img id="album_art" src = \''+ image1 + '\'/>')
  $('#album_covers').append('<img id="album_art" src = \''+ image2 + '\'/>')
  $('#album_covers').append('<img id="album_art" src = \''+ image3 + '\'/>')
 });
-
-
-
-
-  });
-
-
+  return data;
+});
 });
